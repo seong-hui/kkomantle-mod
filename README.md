@@ -18,7 +18,7 @@ claude plugin install kkomantle --marketplace seong-hui/kkomantle-mod
 
 데스크톱 앱에서는 입력창 옆 + 를 누르고 Plugins 에서 Add marketplace 에 `seong-hui/kkomantle-mod` 를 넣은 뒤 Add plugin 을 누른다.
 
-`Add marketplace?` 에 `y`, 범위는 user 를 고르면 바로 켜진다. 비공개 저장소라 초대받은 사람만, 그리고 github.com 인증(SSH 키나 `gh auth login` 뒤 `gh auth setup-git`)이 있는 컴퓨터에서만 설치된다.
+`Add marketplace?` 에 `y`, 범위는 user 를 고르면 바로 켜진다.
 
 ## 사용
 
