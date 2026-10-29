@@ -1,0 +1,5 @@
+{
+  "name": "kkomantle-mod",
+  "owner": { "name": "seong-hui" },
+  "plugins": [{ "name": "kkomantle", "source": "./" }]
+}

@@ -2,6 +2,24 @@
 
 Claude Code 안에서 [꼬맨틀](https://semantle-ko.newsjel.ly)(한국어 단어 유사도 추측 게임)을 하는 mod 다. `/kkom` 명령과 사이드 패널을 등록한다.
 
+## 설치
+
+Claude Code 프롬프트에서:
+
+```
+/plugin install kkomantle --marketplace seong-hui/kkomantle-mod
+```
+
+셸에서:
+
+```
+claude plugin install kkomantle --marketplace seong-hui/kkomantle-mod
+```
+
+데스크톱 앱에서는 입력창 옆 + 를 누르고 Plugins 에서 Add marketplace 에 `seong-hui/kkomantle-mod` 를 넣은 뒤 Add plugin 을 누른다.
+
+`Add marketplace?` 에 `y`, 범위는 user 를 고르면 바로 켜진다. 비공개 저장소라 초대받은 사람만, 그리고 github.com 인증(SSH 키나 `gh auth login` 뒤 `gh auth setup-git`)이 있는 컴퓨터에서만 설치된다.
+
 ## 사용
 
 ```
