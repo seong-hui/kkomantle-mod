@@ -1,0 +1,1 @@
+{ "name": "kkomantle", "version": "0.1.0", "description": "꼬맨틀 단어를 /kkom 이나 패널 입력창으로 추측하고 유사도 순으로 본다", "types": "./types/index.d.ts" }
