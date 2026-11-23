@@ -54,3 +54,23 @@ test('패널 입력창에서 Enter 로 추측한다', async ($, on) => {
   expect((await ui.find({ type: 'Text', text: /^52$/ }))?.text).toBe('52')
   await ui.unmount()
 })
+
+test('패널이 열려 있을 때 /kkom 을 다시 입력하면 닫힌다', async ($, on) => {
+  mock.store(on)
+  on('http.fetch', answerFetch)
+  let panes: { id: string; title: string; isShown: boolean; isFocused: boolean; isPlaced: boolean }[] = []
+  on('ui.panes', () => ({ value: panes }))
+  on('ui.open', (_, e) => {
+    panes = [{ id: e.id, title: e.title ?? '', isShown: true, isFocused: true, isPlaced: true }]
+    return { value: { isPlaced: true } }
+  })
+  on('ui.close', (_, e) => {
+    panes = panes.filter(pane => pane.id !== e.id)
+    return { value: undefined }
+  })
+
+  expect((await $.command.run({ command: 'kkom', args: '' })).text).toBe('꼬맨틀 패널을 열었습니다.')
+  expect(panes.map(pane => pane.id)).toEqual(['kkomantle'])
+  expect((await $.command.run({ command: 'kkom', args: '' })).text).toBe('꼬맨틀 패널을 닫았습니다.')
+  expect(panes).toEqual([])
+})

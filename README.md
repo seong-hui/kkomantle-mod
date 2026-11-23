@@ -23,7 +23,7 @@ claude plugin install kkomantle --marketplace seong-hui/kkomantle-mod
 ## 사용
 
 ```
-/kkom          패널을 연다
+/kkom          패널을 연다 (열려 있으면 닫는다)
 /kkom <단어>    단어를 추측하고 유사도와 순위를 보여 준다
 ```
 

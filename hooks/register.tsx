@@ -27,6 +27,12 @@ export const register: Register = on => {
 
   on('command.run', { command: 'kkom' }, async ($, e) => {
     if (!e.args.trim()) {
+      const isPaneOpen = (await $.ui.panes()).some(pane => pane.id === PANE)
+      if (isPaneOpen) {
+        await $.ui.close({ id: PANE })
+        return { text: '꼬맨틀 패널을 닫았습니다.' }
+      }
+
       await loadToday($)
       await $.ui.open({ id: PANE, title: TITLE, focus: true })
       return { text: '꼬맨틀 패널을 열었습니다.' }
